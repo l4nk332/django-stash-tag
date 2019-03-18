@@ -1,4 +1,4 @@
-# Django Stash Tag 👨🏻‍🦱
+# Django Stash Tag
 
 A Django template tag that allows for markup to be stashed and
 dynamically applied *without* needing to create a separate partial or
