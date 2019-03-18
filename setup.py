@@ -1,9 +1,8 @@
 import pathlib
 from setuptools import setup, find_packages
 
-HERE = pathlib.Path(__file__).parent
-
-README = (HERE / 'README.md').read_text()
+with open('README.md') as readme:
+    README = readme.read()
 
 setup(
     name='django-stash-tag',
@@ -22,5 +21,5 @@ setup(
     ],
     keywords='django, templatetag, template, tag, stash, dynamic',
     packages=find_packages(),
-    install_requires=['django>=1.8']
+    install_requires=['django>=1.11']
 )
