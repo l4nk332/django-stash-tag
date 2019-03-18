@@ -69,8 +69,8 @@ defined in the template's context:
 
 {% stash 'section_header' %}
   <header>
-    <h3>{{title}}</h2>
-    <small>{{subtext}}</small>
+    <h3>{{title}} {{company}}</h2>
+    <small>{{subtext}} {{company}}.</small>
   </header>
 {% endstash %}
 ```
@@ -81,15 +81,15 @@ the context variables referenced in the stashed content
 
 ```
 {% stash_apply 'section_header'
-    title='About {{company.name}}'
-    subtext='We will take you back to when it all began at {{company.name}}.'
+    title='About'
+    subtext='We will take you back to when it all began at'
 %}
 
 {# further down in the template #}
 
 {% stash_apply 'section_header'
-    title='Apply to {{company.name}} today'
-    subtext='We would love for you to join the {{company.name}} family!'
+    title='Apply for a Position at'
+    subtext='Make software development a better experience at'
 %}
 ```
 
@@ -104,8 +104,8 @@ Which would then output:
 <!-- further down in template --> 
 
 <header>
-  <h3>Apply to GitHub today</h2>
-  <small>We would love for you to join the GitHub family!</small>
+  <h3>Apply for a Position at GitHub</h2>
+  <small>Make software development a better experience at GitHub.</small>
 </header>
 ```
 
